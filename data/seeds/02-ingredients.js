@@ -1,7 +1,7 @@
 exports.seed = function (knex) {
   return knex('ingredients').insert([
     {
-      ingredient_name: 'thyme &sesame seed'
+      ingredient_name: 'thyme & sesame seed'
     },
     {
       ingredient_name: 'sumac & sea salt'

@@ -2,16 +2,16 @@ exports.up = function (knex) {
   return knex.schema
     .createTable('recipes', (table) => {
       table.increments('recipe_id');
-      table.string('recipe_name', 128).notNullable();
+      table.string('recipe_name', 32).notNullable();
     })
     .createTable('ingredients', (table) => {
       table.increments('ingredient_id');
-      table.string('ingredient_name', 128).notNullable;
+      table.string('ingredient_name', 64).notNullable;
     })
     .createTable('quantities', (table) => {
       table.increments('quantity_id');
       table.float('measurement');
-      table.string('measurement_type', 128);
+      table.string('measurement_type', 32);
     })
     .createTable('instructions', (table) => {
       table.increments('instruction_id');
